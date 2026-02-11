@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 import argparse
-from datagen import DenoMAEDataGenerator
 from torch.utils.data import DataLoader
 from torchvision import transforms
 import torch.optim as optim
@@ -9,9 +8,10 @@ import numpy as np
 from torch.utils.tensorboard import SummaryWriter
 from torchvision.utils import make_grid
 import os
-from main import DenoMAE2
 from functools import partial
 from tqdm import tqdm
+from .datagen import DenoMAEDataGenerator
+from .main import DenoMAE2
 
 def parse_args():
     parser = argparse.ArgumentParser(description="DenoMAE2.0 Training Script")
