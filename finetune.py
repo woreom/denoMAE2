@@ -6,13 +6,14 @@ from torch.utils.data import DataLoader
 from torchvision import transforms, datasets
 from functools import partial
 from tqdm import tqdm
-from main import DenoMAE2
 import torch.optim.lr_scheduler as lr_scheduler
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 import os
+from .main import DenoMAE2 #custom modules always load last
+
 
 class DownstreamClassifier(nn.Module):
     def __init__(self, denoMAE_model, num_classes, hidden_dim=256, freeze_encoder=True):
