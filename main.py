@@ -5,10 +5,11 @@ import torch.nn as nn
 from sklearn.preprocessing import OneHotEncoder
 from timm.models.vision_transformer import PatchEmbed, Block
 from torch.nn.utils.rnn import pad_sequence
-from .util.pos_embed import get_2d_sincos_pos_embed
 from PIL import Image
 import os
 from torchvision import transforms
+from .util.pos_embed import get_2d_sincos_pos_embed
+
 
 import warnings
 warnings.filterwarnings("ignore")
